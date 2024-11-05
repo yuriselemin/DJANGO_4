@@ -1,13 +1,17 @@
-{% extends 'base.html' %}
+{% extends "fourth_task\menu.html" %}
+
+
+{% block title %}
+    {{ block.super }}
+{% endblock %}
+
+{% block pagename %}
+    {{ block.super }}
+{% endblock %}
+
+{% block menu  %}
+    {{ block.super }}
+{% endblock %}
 
 {% block content %}
-    <h1>Главная страница</h1>
-
-    <nav>
-        <ul>
-            <li><a href="{% url 'main' %}">Главная страница</a></li>
-            <li><a href="{% url 'store' %}">Магазин</a></li>
-            <li><a href="{% url 'cart' %}">Корзина</a></li>
-        </ul>
-    </nav>
 {% endblock %}

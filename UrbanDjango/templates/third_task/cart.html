@@ -1,17 +1,7 @@
-{% extends "fourth_task\menu.html" %}
-
-{% block title %}
-    Корзина
-{% endblock %}
-
-{% block pagename %}
-    <h1>Корзина</h1>
-{% endblock %}
-
-{% block menu  %}
-    {{ block.super }}
-{% endblock %}
+{% extends 'base.html' %}
 
 {% block content %}
-    <h1>Ваша корзина пуста</h1>
+    <h2>Корзина</h2>
+
+    <a href="{% url 'main' %}">На главную</a>
 {% endblock %}

@@ -1,22 +1,15 @@
-{% extends "fourth_task\menu.html" %}
-
-{% block title %}
-    Items
-{% endblock %}
-
-{% block pagename %}
-    <h1>Items</h1>
-{% endblock %}
-
-{% block menu  %}
-    {{ block.super }}
-{% endblock %}
+{% extends 'base.html' %}
 
 {% block content %}
+    <h2>Магазин</h2>
+
     <ul>
-        {% for i in store %}
-            <li>{{i}} <button>Купить</button></li>
+        {% for item in items %}
+            <li>{{ item.name }}
+                <button>Купить</button>
+            </li>
         {% endfor %}
     </ul>
 
+    <a href="{% url 'main' %}">На главную</a>
 {% endblock %}
